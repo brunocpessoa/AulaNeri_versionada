@@ -1,0 +1,19 @@
+﻿@model AulaNeri2.Models.Professores
+@{
+    ViewBag.Title = "ListaUm";
+}
+
+<h2>Lista um Professor</h2>
+
+<table>
+    <tr>
+        <th>Códido do Professor</th>
+        <th>Nome do Professor</th>
+        <th>Curso do Professor</th>
+    </tr>
+    <tr>
+        <td>@Html.DisplayFor(profCodigo => profCodigo.profCodigo)</td>
+        <td>@Html.DisplayFor(profNome => profNome.profNome)</td>
+        <td>@Html.DisplayFor(profCurso => profCurso.profCurso)</td>
+    </tr>
+</table>

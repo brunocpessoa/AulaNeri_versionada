@@ -1,0 +1,25 @@
+﻿@model AulaNeri2.Models.Professores
+@{
+    ViewBag.Title = "NovoProfessor";
+}
+
+<h2>Cadastro de novo professor</h2>
+@using (Html.BeginForm())
+{
+
+    <p>@Html.ValidationSummary(false, "Compos inválidos")</p>
+    @Html.EditorForModel();
+    <!-- <div>
+        @Html.LabelFor(professor => professor.profCodigo)
+        @Html.EditorFor(professor => professor.profCodigo)
+    </div>
+    <div>
+        @Html.LabelFor(professor => professor.profNome)
+        @Html.EditorFor(professor => professor.profNome)
+    </div>
+    <div>
+        @Html.LabelFor(professor => professor.profCurso)
+        @Html.EditorFor(professor => professor.profCurso)
+    </div>-->
+    <p><input type="submit" value="Gravar registro" /></p>
+}

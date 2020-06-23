@@ -1,0 +1,42 @@
+﻿@model AulaNeri2.Models.curso
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>curso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.curDescricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.curDescricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.curProferror)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.curProferror)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.curPreco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.curPreco)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.curCodigo }) |
+    @Html.ActionLink("Voltar para a lista", "Index")
+</p>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AulaNeri2.Models.curso>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index do Curso alterada da novaBranch2_2</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<h1>Apenas testando um título</h1>
+<table class="table">
+    <tr>
+        <th>
+           Código
+        </th>
+        <th>
+            Descrição
+        </th>
+        <th>
+            Proferror
+        </th>
+        <th>
+            Preço
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.curCodigo
+   )
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.curDescricao)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.curProferror)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.curPreco)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.curCodigo }) |
+        @Html.ActionLink("Detalhes", "Details", new { id = item.curCodigo }) |
+        @Html.ActionLink("Excluir", "Delete", new { id = item.curCodigo })
+    </td>
+</tr>
+}
+
+</table>

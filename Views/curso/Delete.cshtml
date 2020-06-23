@@ -1,0 +1,48 @@
+﻿@model AulaNeri2.Models.curso
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Tem certeza que deseja exlcuir o curso?</h3>
+<div>
+    <h4>curso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.curDescricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.curDescricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.curProferror)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.curProferror)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.curPreco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.curPreco)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,24 @@
+﻿@model AulaNeri2.Models.Professores
+@{
+    ViewBag.Title = "Excluir Professor";
+}
+
+<h2>Exclusão de professor</h2>
+@using (Html.BeginForm("ExcluirProfessorSim","Professores"))
+{
+    @Html.HiddenFor(professor => professor.profCodigo)
+
+    <div>
+        @Html.LabelFor(professor => professor.profCodigo)
+        @Html.DisplayFor(professor => professor.profCodigo)
+    </div>
+    <div>
+        @Html.LabelFor(professor => professor.profNome)
+        @Html.DisplayFor(professor => professor.profNome)
+    </div>
+    <div>
+        @Html.LabelFor(professor => professor.profCurso)
+        @Html.DisplayFor(professor => professor.profCurso)
+    </div>
+    <p><input type="submit" value="Excluir esse professor" /></p>
+}

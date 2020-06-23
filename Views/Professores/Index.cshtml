@@ -1,0 +1,36 @@
+﻿@model List<AulaNeri2.Models.Professores>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    @if (TempData["mensagem"] != null)
+    {
+        @TempData["mensagem"]
+    }
+
+</h2>
+<p>Lista todos os professores</p>
+
+<div>
+    @Html.ActionLink("Cadastrar novo professor", "NovoProfessor")
+</div>
+<table>
+    <tr>
+        <th>Códido do Professor</th>
+        <th>Nome do Professor</th>
+        <th>Curso do Professor</th>
+        <th>Exclusão</th>
+        <th>Alteração</th>
+    </tr>
+    @foreach (var Professores in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(profCodigo => Professores.profCodigo)</td>
+            <td>@Html.DisplayFor(profNome => Professores.profNome)</td>
+            <td>@Html.DisplayFor(profCurso => Professores.profCurso)</td>
+            <td>@Html.ActionLink("Excluir", "ExcluirProfessor", new { id = Professores.profCodigo })</td>
+            <td>@Html.ActionLink("Editar", "EditarProfessor", new { id = Professores.profCodigo })</td>
+        </tr>
+    }
+</table>
